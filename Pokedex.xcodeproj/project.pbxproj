@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F75DBBB1E13FACC000B4473 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F75DBBA1E13FACC000B4473 /* Pokemon.swift */; };
 		0FF7334D1E12C3EA0074BE51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7334C1E12C3EA0074BE51 /* AppDelegate.swift */; };
 		0FF7334F1E12C3EA0074BE51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7334E1E12C3EA0074BE51 /* ViewController.swift */; };
 		0FF733521E12C3EA0074BE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF733501E12C3EA0074BE51 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F75DBBA1E13FACC000B4473 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		0FF733491E12C3EA0074BE51 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF7334C1E12C3EA0074BE51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF7334E1E12C3EA0074BE51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F75DBB91E13FABE000B4473 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F75DBBA1E13FACC000B4473 /* Pokemon.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		0FF733401E12C3EA0074BE51 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		0FF7334B1E12C3EA0074BE51 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				0F75DBB91E13FABE000B4473 /* Model */,
 				0FF7334C1E12C3EA0074BE51 /* AppDelegate.swift */,
 				0FF7334E1E12C3EA0074BE51 /* ViewController.swift */,
 				0FF733501E12C3EA0074BE51 /* Main.storyboard */,
@@ -143,6 +154,7 @@
 			files = (
 				0FF7334F1E12C3EA0074BE51 /* ViewController.swift in Sources */,
 				0FF7334D1E12C3EA0074BE51 /* AppDelegate.swift in Sources */,
+				0F75DBBB1E13FACC000B4473 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +316,7 @@
 				0FF7335D1E12C3EA0074BE51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
