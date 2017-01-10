@@ -19,7 +19,7 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
     var inSearchMode = false
     var musicPlayer: AVAudioPlayer!
     
-    var text: UITextField!
+//    var text: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +28,19 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         collection.dataSource = self
         collection.delegate = self
         searchBar.delegate = self
-        //test.delegate = self
+        
         
         searchBar.returnKeyType = UIReturnKeyType.done
         
-        //cast searchBar as UITextfield
-        let v1 = searchBar.subviews[0]
-        print(v1.subviews.count)
-        
-        //this is UISearchBarTextField
-        let v3 = v1.subviews[1]
-        let tf = v3 as! UITextField
-        tf.text = "em khung"
+//        //cast searchBar as UITextfield
+//        let v1 = searchBar.subviews[0]
+//        print(v1.subviews.count)
+//        
+//        //this is UISearchBarTextField
+//        let v3 = v1.subviews[1]
+//        let tf = v3 as! UITextField
+//        tf.delegate = self
+//        tf.text = "em khung"
         
 //        for v2 in v1.subviews{
 //            print(v2)
@@ -77,14 +78,13 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         
     }
     
-    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        //searchBar.endEditing(true)
-        //searchBar.resignFirstResponder()
-        searchBar.resignFirstResponder()
-        //test.text = ""
-        print("do it")
-        return false
-    }
+//    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+//        //searchBar.endEditing(true)
+//        //searchBar.resignFirstResponder()
+//        searchBar.resignFirstResponder()
+//        print("do it")
+//        return false
+//    }
     
 //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 //        test.endEditing(true)
@@ -165,7 +165,8 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.endEditing(true)
+        //searchBar.endEditing(true)
+        searchBar.resignFirstResponder()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -181,7 +182,8 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
             collection.reloadData()
-            view.endEditing(true)
+            //view.endEditing(true)
+            searchBar.resignFirstResponder()
             
         } else {
             inSearchMode = true
