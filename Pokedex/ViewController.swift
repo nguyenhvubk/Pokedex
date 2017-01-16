@@ -193,7 +193,12 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         inSearchMode = false
         searchBar.text = ""
         collection.reloadData()
+        searchBar.showsCancelButton = false
         
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
